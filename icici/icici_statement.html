@@ -304,6 +304,196 @@
         .transaction-row {
             position: relative;
         }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 10px;
+                align-items: stretch;
+            }
+
+            .header-title {
+                font-size: 14px;
+            }
+
+            .account-selector {
+                min-width: 100%;
+                padding: 10px 15px;
+                font-size: 12px;
+            }
+
+            .close-btn {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+            }
+
+            .tabs {
+                flex-direction: column;
+            }
+
+            .tab {
+                border-radius: 0 !important;
+                padding: 12px 20px;
+                font-size: 12px;
+            }
+
+            .tab:first-child {
+                border-radius: 20px 20px 0 0 !important;
+            }
+
+            .tab:last-child {
+                border-radius: 0 0 20px 20px !important;
+            }
+
+            .search-input {
+                padding: 12px 15px 12px 45px;
+                font-size: 13px;
+            }
+
+            .search-icon {
+                left: 15px;
+            }
+
+            .dispute-link {
+                margin-bottom: 15px;
+            }
+
+            .dispute-link a {
+                font-size: 11px;
+            }
+
+            .table-header {
+                display: none; /* Hide table headers on mobile */
+            }
+
+            .month-header {
+                padding-left: 10px;
+                flex-wrap: wrap;
+            }
+
+            .month-label,
+            .transaction-count {
+                font-size: 10px;
+                padding: 5px 12px;
+            }
+
+            .transaction-row {
+                grid-template-columns: 60px 1fr;
+                grid-template-rows: auto auto;
+                padding: 15px 10px;
+                gap: 10px;
+            }
+
+            .date-cell {
+                grid-row: 1 / 3;
+            }
+
+            .date-day {
+                font-size: 24px;
+            }
+
+            .date-month {
+                font-size: 10px;
+            }
+
+            .transaction-info {
+                grid-column: 2;
+                grid-row: 1;
+                gap: 10px;
+            }
+
+            .transaction-icon {
+                width: 35px;
+                height: 35px;
+                font-size: 16px;
+            }
+
+            .transaction-type {
+                font-size: 12px;
+            }
+
+            .transaction-description {
+                font-size: 11px;
+            }
+
+            .amount {
+                grid-column: 2;
+                grid-row: 2;
+                text-align: left;
+                font-size: 14px;
+                display: flex;
+                justify-content: space-between;
+                padding-left: 45px;
+            }
+
+            .amount::before {
+                font-size: 11px;
+                font-weight: 500;
+                color: #999;
+            }
+
+            .amount-credit::before {
+                content: 'Credit: ';
+            }
+
+            .amount-debit::before {
+                content: 'Debit: ';
+            }
+
+            .amount-placeholder {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 15px;
+            }
+
+            .account-selector {
+                font-size: 11px;
+            }
+
+            .transaction-row {
+                grid-template-columns: 50px 1fr;
+                padding: 12px 8px;
+            }
+
+            .date-day {
+                font-size: 20px;
+            }
+
+            .date-month {
+                font-size: 9px;
+            }
+
+            .transaction-type {
+                font-size: 11px;
+            }
+
+            .transaction-description {
+                font-size: 10px;
+            }
+
+            .amount {
+                font-size: 13px;
+                padding-left: 40px;
+            }
+        }
     </style>
 </head>
 <body>
